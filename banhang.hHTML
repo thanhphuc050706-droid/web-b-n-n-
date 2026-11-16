@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MY WORLD - Phúc Thành</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
+:root{--bg:#f5f1ff;--card:white;--text:#292044;--main:#7652df}
+body{font-family:Arial,sans-serif;background:var(--bg);color:var(--text);transition:.3s}
+body.dark{--bg:#17152a;--card:#292541;--text:#fff;--main:#a68aff}
+header{position:sticky;top:0;z-index:10;background:#35245e;color:white;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:23px;font-weight:bold}
+nav{display:flex;flex-wrap:wrap;gap:17px}
+nav a{color:white;text-decoration:none;font-size:14px}
+nav a:hover{color:#ffd36e}
+.hero{padding:95px 15px;text-align:center;color:white;background:linear-gradient(120deg,#7355e7,#ba75e9,#fa91ba)}
+.hero h1{font-size:clamp(32px,6vw,55px);margin-bottom:20px}
+.hero p{font-size:18px;line-height:1.8}
+.btn{display:inline-block;border:0;border-radius:30px;padding:13px 23px;background:white;color:#6947c5;text-decoration:none;font-weight:bold;cursor:pointer;margin:8px}
+.btn:hover{transform:scale(1.06)}
+section{padding:65px 8%;text-align:center}
+h2{font-size:30px;color:var(--main);margin-bottom:25px}
+p{line-height:1.8}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px}
+.card{background:var(--card);padding:25px;border-radius:20px;box-shadow:0 7px 25px #45307518;transition:.3s}
+.card:hover{transform:translateY(-8px);box-shadow:0 10px 30px #7652df40}
+.card .emoji{font-size:45px;margin-bottom:15px}
+.card h3{margin-bottom:12px;color:var(--main)}
+.card a{color:var(--main);font-weight:bold;text-decoration:none}
+.gallery img{width:100%;height:170px;object-fit:cover;border-radius:15px;margin-bottom:12px}
+.quiz{max-width:550px;margin:auto;background:var(--card);padding:25px;border-radius:20px}
+.quiz button{margin:7px;padding:12px 20px;border:0;border-radius:20px;background:var(--main);color:white;cursor:pointer}
+#answer{margin-top:15px;font-weight:bold}
+.contact{background:#e8ddff}
+body.dark .contact{background:#292541}
+footer{background:#35245e;color:white;padding:30px;text-align:center}
+#top{position:fixed;right:20px;bottom:20px;border:0;background:var(--main);color:white;padding:14px;border-radius:50%;cursor:pointer}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="logo">🌟 MY WORLD</div>
+ <nav>
+  <a href="#home">Trang chủ</a>
+  <a href="#about">Giới thiệu</a>
+  <a href="#hobby">Sở thích</a>
+  <a href="#gallery">Hình ảnh</a>
+  <a href="#game">Trò chơi</a>
+  <a href="#contact">Liên hệ</a>
+ </nav>
+ <button class="btn" onclick="darkMode()">🌙 Đổi màu</button>
+</header>
+
+<div class="hero" id="home">
+ <h1>Xin chào! Tôi là Phúc Thành 👋</h1>
+ <p>Chào mừng bạn đến với thế giới của tôi!</p>
+ <p>✨ Học tập - Khám phá - Sáng tạo - Thành công ✨</p>
+ <a class="btn" href="#about">Khám phá ngay 🚀</a>
+ <a class="btn" href="#game">Chơi trò chơi 🎮</a>
+</div>
+
+<section id="about">
+ <h2>👋 GIỚI THIỆU BẢN THÂN</h2>
+ <div class="card">
+  <div class="emoji">👨‍💻</div>
+  <h3>Phúc Thành</h3>
+  <p>Tôi là sinh viên yêu thích công nghệ và lập trình.</p>
+  <p>Đang học tập và phát triển kỹ năng lập trình Web tại FPT Polytechnic.</p>
+  <p>Ước mơ: Trở thành một lập trình viên chuyên nghiệp.</p>
+ </div>
+</section>
+
+<section id="hobby">
+ <h2>❤️ SỞ THÍCH CỦA TÔI</h2>
+ <div class="cards">
+  <div class="card"><div class="emoji">💻</div><h3>Lập trình</h3><p>Khám phá công nghệ và tạo website.</p></div>
+  <div class="card"><div class="emoji">🎮</div><h3>Chơi game</h3><p>Giải trí và thư giãn.</p></div>
+  <div class="card"><div class="emoji">🎵</div><h3>Âm nhạc</h3><p>Nghe những bài hát yêu thích.</p><a href="https://www.youtube.com/" target="_blank">Nghe nhạc ngay ↗</a></div>
+  <div class="card"><div class="emoji">✈️</div><h3>Du lịch</h3><p>Khám phá thế giới xung quanh.</p><a href="https://www.google.com/maps" target="_blank">Khám phá bản đồ ↗</a></div>
+ </div>
+</section>
+
+<section id="gallery">
+ <h2>📸 THẾ GIỚI HÌNH ẢNH</h2>
+ <div class="cards gallery">
+  <div class="card"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600" alt="Công nghệ"><h3>💻 Công nghệ</h3></div>
+  <div class="card"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=600" alt="Du lịch"><h3>🌄 Du lịch</h3></div>
+  <div class="card"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=600" alt="Bầu trời"><h3>🌌 Bầu trời</h3></div>
+ </div>
+</section>
+
+<section id="game">
+ <h2>🎮 TRÒ CHƠI ĐOÁN SỐ</h2>
+ <div class="quiz">
+  <p>Tôi đang nghĩ một số từ 1 đến 10. Bạn đoán thử nhé!</p>
+  <input id="guess" type="number" min="1" max="10" placeholder="Nhập số 1 - 10" style="padding:12px;border-radius:12px;border:1px solid #aaa;margin-top:15px">
+  <br>
+  <button onclick="play()">Kiểm tra 🎯</button>
+  <button onclick="resetGame()">Chơi lại 🔄</button>
+  <p id="answer">Chúc bạn may mắn!</p>
+ </div>
+</section>
+
+<section>
+ <h2>🌐 NHỮNG TRANG WEB THÚ VỊ</h2>
+ <div class="cards">
+  <div class="card"><div class="emoji">🔎</div><h3>Google</h3><a href="https://www.google.com/" target="_blank">Truy cập ngay ↗</a></div>
+  <div class="card"><div class="emoji">▶️</div><h3>YouTube</h3><a href="https://www.youtube.com/" target="_blank">Xem video ↗</a></div>
+  <div class="card"><div class="emoji">💻</div><h3>GitHub</h3><a href="https://github.com/" target="_blank">Khám phá ↗</a></div>
+  <div class="card"><div class="emoji">🎓</div><h3>FPT Polytechnic</h3><a href="https://caodang.fpt.edu.vn/" target="_blank">Truy cập trường ↗</a></div>
+  <div class="card"><div class="emoji">📚</div><h3>W3Schools</h3><a href="https://www.w3schools.com/" target="_blank">Học lập trình ↗</a></div>
+ </div>
+</section>
+
+<section class="contact" id="contact">
+ <h2>📩 CẢM ƠN BẠN ĐÃ GHÉ THĂM</h2>
+ <p>Chúc bạn một ngày vui vẻ và thành công! ❤️</p>
+ <a class="btn" href="https://www.facebook.com/" target="_blank">Facebook ↗</a>
+ <a class="btn" href="mailto:">Gửi email</a>
+</section>
+
+<footer>
+ <h3>🌟 MY WORLD - PHÚC THÀNH</h3>
+ <p>© 2026 | Website cá nhân của tôi ❤️</p>
+ <p>Cảm ơn bạn đã ghé thăm!</p>
+</footer>
+
+<button id="top" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+function darkMode(){
+ document.body.classList.toggle("dark");
+}
+let secret=Math.floor(Math.random()*10)+1;
+function play(){
+ let n=Number(document.getElementById("guess").value);
+ let result=document.getElementById("answer");
+ if(n<1||n>10||!Number.isInteger(n)){
+  result.innerText="Hãy nhập số nguyên từ 1 đến 10 nhé!";
+ }else if(n===secret){
+  result.innerText="🎉 Chính xác! Bạn thật tuyệt vời!";
+ }else if(n<secret){
+  result.innerText="⬆️ Số bí mật lớn hơn! Thử lại nhé.";
+ }else{
+  result.innerText="⬇️ Số bí mật nhỏ hơn! Thử lại nhé.";
+ }
+}
+function resetGame(){
+ secret=Math.floor(Math.random()*10)+1;
+ document.getElementById("guess").value="";
+ document.getElementById("answer").innerText="Đã đổi số! Chơi lại nào 🎮";
+}
+</script>
+</body>
+</html>
